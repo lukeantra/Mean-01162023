@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustompipeComponent } from './custompipe/custompipe.component';
 import { ConvertPipe } from './custompipe/convert.pipe';
 import { FormsModule } from '@angular/forms';
+import { CumstomPipePipe } from './custompipe/cumstom-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PipesComponent,
     CustompipeComponent,
-    ConvertPipe
+    ConvertPipe,
+    CumstomPipePipe
   ],
   imports: [
     BrowserModule,

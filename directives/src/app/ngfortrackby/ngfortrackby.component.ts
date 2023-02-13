@@ -38,7 +38,7 @@ export class NgfortrackbyComponent implements OnInit {
   }
 
   trackByFn(index: number, item: Movie) {
-    return item.title;
+    return item.director;
   }
 
 }

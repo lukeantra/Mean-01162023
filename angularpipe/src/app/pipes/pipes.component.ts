@@ -10,21 +10,25 @@ import { Subscription } from 'rxjs';
 export class PipesComponent implements OnInit, OnDestroy {
   obj = {
     name: 'jojo',
-    age: 12,
+    year: 2023,
     company: 'jump',
+    
   };
 
+  // arr = [{a: 1}, {b: 2}]
+
   todos: any;
-  subscription!: Subscription;
-  todos$: any;
+  // subscription!: Subscription;
+  // todos$: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    
     // this.subscription = this.getTodos().subscribe(data => {
     //   this.todos = data;
     // })
-    this.todos$ = this.getTodos();
+    // this.todos$ = this.getTodos();
   }
 
   ngOnDestroy(): void {
@@ -32,7 +36,7 @@ export class PipesComponent implements OnInit, OnDestroy {
   }
 
   sorting() {
-    return 0;
+    return 1;
   }
 
   getTodos() {

@@ -5,7 +5,7 @@ import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angula
 })
 export class ColorDirective {
   color!: string;
-  @Input() colorpass = '';
+  @Input() colorpass!: string;
   @Input() defaultColor = '';
 
   @HostListener('mouseenter')
@@ -18,7 +18,7 @@ export class ColorDirective {
     this.highlight('');
   }
 
-  @HostBinding('disabled') disable: boolean = true;
+  // @HostBinding('disabled') disable: boolean = true;
   @HostBinding('style.border') border: string = "5px solid blue";
 
   constructor(private ele: ElementRef) { }

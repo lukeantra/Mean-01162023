@@ -1,7 +1,7 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[appNewcolor]'
+  selector: '[newcolor]'
 })
 export class NewcolorDirective {
 

@@ -564,6 +564,7 @@ const getTodo = (id, cb) => {
 //         })
 //     }
 
+
 //     reject = (rejData) => {
 //         setTimeout(() => {
 //             const cb = this.thenCallBackqueue.shift();

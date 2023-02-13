@@ -38,7 +38,6 @@ export class NgforComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
 }
 export interface Movie {
   title : string;

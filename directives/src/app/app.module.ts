@@ -11,6 +11,7 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgfortrackbyComponent } from './ngfortrackby/ngfortrackby.component';
 import { CustomdirectiveComponent } from './customdirective/customdirective.component';
 import { ColorDirective } from './customdirective/color.directive';
+import { NewcolorDirective } from './customdirective/newcolor.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ColorDirective } from './customdirective/color.directive';
     NgswitchComponent,
     NgfortrackbyComponent,
     CustomdirectiveComponent,
-    ColorDirective
+    ColorDirective,
+    NewcolorDirective
   ],
   imports: [
     BrowserModule,

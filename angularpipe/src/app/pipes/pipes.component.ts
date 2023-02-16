@@ -1,3 +1,4 @@
+import { KeyValue } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
@@ -10,7 +11,7 @@ import { Subscription } from 'rxjs';
 export class PipesComponent implements OnInit, OnDestroy {
   obj = {
     name: 'jojo',
-    year: 2023,
+    age: '23',
     company: 'jump',
     
   };
@@ -35,9 +36,12 @@ export class PipesComponent implements OnInit, OnDestroy {
     // this.subscription.unsubscribe();
   }
 
-  sorting() {
-    return 1;
+  sorting(a: KeyValue<string,string>, b: KeyValue<string,string>): number {
+    // return 0;
+    // return a.key.localeCompare(b.key);
+    return -a.key.localeCompare(b.key);
   }
+
 
   getTodos() {
     return this.http.get('https://jsonplaceholder.typicode.com/todos');

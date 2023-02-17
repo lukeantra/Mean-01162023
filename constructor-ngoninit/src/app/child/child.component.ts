@@ -1,11 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent implements OnInit, OnDestroy {
+
   formattedValue = '';
   @Input() valueFromParent = 0;
 
@@ -27,7 +28,12 @@ export class ChildComponent implements OnInit {
     // } else {
     //   this.formattedValue = 'greater than or equal to 50';
     // }
+    
 
+  }
+
+  ngOnDestroy(): void {
+    
   }
 
 }

@@ -15,19 +15,22 @@ export class PipesComponent implements OnInit, OnDestroy {
     company: 'jump',
     
   };
-
+  counter = 0;
   // arr = [{a: 1}, {b: 2}]
-
   // todos: any;
   // subscription!: Subscription;
+  // todos$: any;
   todos$: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    // this.getTodos().subscribe((todos) => {
+    //   this.todos$ = todos;
+    // })
     
     // this.subscription = this.getTodos().subscribe(data => {
-    //   this.todos = data;
+    //   this.todos$ = data;
     // })
     this.todos$ = this.getTodos();
   }
@@ -36,10 +39,11 @@ export class PipesComponent implements OnInit, OnDestroy {
     // this.subscription.unsubscribe();
   }
 
+
   sorting(a: KeyValue<string,string>, b: KeyValue<string,string>): number {
     // return 0;
-    // return a.key.localeCompare(b.key);
-    return -a.key.localeCompare(b.key);
+    return a.key.localeCompare(b.key);
+    // return -a.key.localeCompare(b.key);
   }
 
 

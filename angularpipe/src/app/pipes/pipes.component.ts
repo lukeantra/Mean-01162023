@@ -18,9 +18,9 @@ export class PipesComponent implements OnInit, OnDestroy {
 
   // arr = [{a: 1}, {b: 2}]
 
-  todos: any;
+  // todos: any;
   // subscription!: Subscription;
-  // todos$: any;
+  todos$: any;
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +29,7 @@ export class PipesComponent implements OnInit, OnDestroy {
     // this.subscription = this.getTodos().subscribe(data => {
     //   this.todos = data;
     // })
-    // this.todos$ = this.getTodos();
+    this.todos$ = this.getTodos();
   }
 
   ngOnDestroy(): void {

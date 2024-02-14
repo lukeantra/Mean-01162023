@@ -540,6 +540,7 @@ const getTodo = (id, cb) => {
 
 //     constructor(executor) {
 //         try{
+//              // reject is arrow function, so no bind() for reject
 //             executor(this.resolve.bind(this), this.reject);
 //         } catch (err) {
 //             this.reject(err);
